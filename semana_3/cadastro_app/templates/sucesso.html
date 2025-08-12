@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrado Com Sucesso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+     <div class="container">
+        <h1>Dados Recebidos</h1>
+        <p><strong>nome:</strong>{{ nome }}</p>
+        <p><strong>email:</strong>{{ email }}</p>
+        <p><strong>senha:</strong>{{ senha }}</p>
+        <a href="/">Voltar</a>
+    </div>
+</body>
+</html>
