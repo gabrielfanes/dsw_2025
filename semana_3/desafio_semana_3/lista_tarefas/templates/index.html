@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+
+    <form method="POST">
+        <label for="tarefa">Tarefa:</label>
+        <input type="text" name="tarefa" required>
+
+        <label for="data_limite">Data Limite:</label>
+        <input type="date" name="data_limite" required>
+
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tarefa</th>
+                <th>Data Limite</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in tarefas %}
+            <tr>
+                <td>{{ t.tarefa }}</td>
+                <td>{{ t.data_limite }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
